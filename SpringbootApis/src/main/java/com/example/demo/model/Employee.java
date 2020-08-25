@@ -1,7 +1,13 @@
 package com.example.demo.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+
 public class Employee {
 
+	@Id
 	private int id;
 	
 	private String name;
@@ -13,15 +19,19 @@ public class Employee {
 	private String mobile;
 
 	
-	
+	public Employee()
+	{
+		
+	}
 	public Employee(int id, String name, String address, String gender, String mobile) {
-		super();
 		this.id = id;
 		this.name = name;
 		this.address = address;
 		this.gender = gender;
 		this.mobile = mobile;
 	}
+	
+	
 
 	public int getId() {
 		return id;
